@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State 1745 - Whiteout Survival</title>
+    <style>
+        /* Basis-Design & Icy-Theme */
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --primary-ice: #38bdf8;
+            --text-light: #f1f5f9;
+            --text-gray: #94a3b8;
+            --accent-gold: #fbbf24;
+            --discord-purple: #5865F2;
+            --discord-hover: #4752C4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            background-image: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            background-attachment: fixed;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(15, 23, 42, 0.9);
+            border-bottom: 2px solid var(--primary-ice);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-light);
+            text-shadow: 0 0 10px var(--primary-ice);
+        }
+
+        .logo span {
+            color: var(--primary-ice);
+        }
+
+        /* Übersetzungstool Integration */
+        .translate-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-gray);
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            color: var(--primary-ice);
+            border-color: var(--primary-ice);
+            background: rgba(56, 189, 248, 0.1);
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Hauptbereich */
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Content Sektionen */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero Banner */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=1200&q=80') center/cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            color: var(--primary-ice);
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        /* Karten / Boxen */
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--primary-ice);
+            font-size: 22px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+            padding-bottom: 8px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            color: var(--text-gray);
+        }
+
+        ul li::before {
+            content: "❄";
+            position: absolute;
+            left: 0;
+            color: var(--primary-ice);
+        }
+
+        /* Aktionsbereich für Buttons */
+        .action-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Kontaktformular & Buttons */
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+        }
+
+        /* Spezieller Discord Button */
+        .discord-btn {
+            background: linear-gradient(135deg, var(--discord-purple) 0%, #404EED 100%);
+            box-shadow: 0 4px 14px rgba(88, 101, 242, 0.4);
+        }
+
+        .discord-btn:hover {
+            background: linear-gradient(135deg, #6c78f3 0%, var(--discord-purple) 100%);
+            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+        }
+
+        /* Formular-Styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 4px;
+            color: white;
+        }
