@@ -255,4 +255,313 @@
             color: white;
         }
 
-        ``
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-ice);
+            box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-gray);
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>State <span>1745</span></h1>
+            </div>
+            
+            <div class="translate-box">
+                <div id="google_translate_element"></div>
+            </div>
+
+            <nav>
+                <button class="nav-btn active" onclick="openTab('state')">Staat 1745</button>
+                <button class="nav-btn" onclick="openTab('pow')">PoW</button>
+                <button class="nav-btn" onclick="openTab('ywn')">YWN</button>
+                <button class="nav-btn" onclick="openTab('mvl')">MVL</button>
+                <button class="nav-btn" onclick="openTab('big')">BiG</button>
+                <button class="nav-btn" onclick="openTab('sta')">StA</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <div id="state" class="tab-content active">
+            <div class="hero">
+                <h2>Willkommen in Staat 1745</h2>
+                <p>Einigkeit • Ordnung • Stärke</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Über unseren Staat</h3>
+                    <p>Staat 1745 ist eine eingeschworene Gemeinschaft in der unbarmherzigen Eiswüste von Whiteout Survival. Während draußen der Blizzard tobt, regiert im Inneren unseres Staates die absolute Kooperation. Wir glauben daran, dass Führung, Freundschaft und gemeinsame Event-Planung der Schlüssel zum Überleben und zur Dominanz im State-of-the-Power-Kampf sind.</p>
+                </div>
+                <div class="card">
+                    <h3>Unsere Philosophie</h3>
+                    <ul>
+                        <li><strong>Keine internen Konflikte:</strong> Probleme werden diplomatisch am runden Tisch gelöst.</li>
+                        <li><strong>Gemeinsames Wachstum:</strong> Starke Allianzen unterstützen die kleineren, um den gesamten Staat zu stärken.</li>
+                        <li><strong>Verteidigung des Rathauses:</strong> Bei staatsübergreifenden Kämpfen stehen wir Schulter an Schulter als eine einzige Armee.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="pow" class="tab-content">
+            <div class="hero">
+                <h2>Allianz: PoW</h2>
+                <p>Die Speerspitze von 1745</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Kurzprofil</h3>
+                    <p>PoW steht für unbändigen Willen und unerschütterliche Loyalität. Wir sind eine der tragenden Säulen des Staates und fokussieren uns auf High-End-Content, Festungskämpfe und die Ausbildung von Spitzen-Taktikern.</p>
+                    <br>
+                    <h3>Regeln</h3>
+                    <ul>
+                        <li>Tägliche Aktivität und Spenden in die Allianz-Technologie.</li>
+                        <li>Teilnahme an Staats-Events ist Pflicht.</li>
+                        <li>Respektvoller Umgang intern sowie gegenüber staatlichen Verbündeten.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Recruiting-Infos</h3>
+                    <p>Du suchst nach einer aktiven, kampferprobten Truppe? Wir suchen Spieler, die taktisches Verständnis mitbringen und im Team wachsen wollen.</p>
+                    <ul>
+                        <li>Mindest-Ofenstufe: 26+</li>
+                        <li>Mindest-Kampfkraft: Nach Absprache</li>
+                        <li>Bereitschaft zur Discord-Kommunikation bei Events</li>
+                    </ul>
+                    <div class="action-container">
+                        <button class="cta-btn" onclick="scrollToForm('PoW')">Jetzt Bewerben</button>
+                        <a href="#" target="_blank" class="cta-btn discord-btn">Discord beitreten</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ywn" class="tab-content">
+            <div class="hero">
+                <h2>Allianz: YWN</h2>
+                <p>Gemeinsam unschlagbar</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Kurzprofil</h3>
+                    <p>YWN zeichnet sich durch eine extrem familiäre Struktur und exzellente Event-Koordination aus. Bei uns zählt jedes Mitglied – vom Gelegenheitsspieler bis zum Hardcore-Gamer organisieren wir ein perfektes Ökosystem.</p>
+                    <br>
+                    <h3>Regeln</h3>
+                    <ul>
+                        <li>Bärenjagd-Teilnahme und Koordination über Allianz-Chats.</li>
+                        <li>Keine Angriffe auf staatliche NAP-Partner.</li>
+                        <li>Hilfsbereitschaft bei Bau- und Forschungs-Helfen.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Recruiting-Infos</h3>
+                    <p>Unsere Tore stehen offen für treue Seelen, die eine langfristige Heimat im Eis suchen. Loyalität steht bei uns über reiner Kampfkraft.</p>
+                    <ul>
+                        <li>Mindest-Ofenstufe: 22+</li>
+                        <li>Hohe Chat-Aktivität erwünscht</li>
+                        <li>Teamplayer mit Fokus auf Verteidigung</li>
+                    </ul>
+                    <div class="action-container">
+                        <button class="cta-btn" onclick="scrollToForm('YWN')">Jetzt Bewerben</button>
+                        <a href="#" target="_blank" class="cta-btn discord-btn">Discord beitreten</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mvl" class="tab-content">
+            <div class="hero">
+                <h2>Allianz: MVL</h2>
+                <p>Die Wächter des Frosts</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Kurzprofil</h3>
+                    <p>MVL sichert die Grenzen und sorgt für strategische Stabilität im Staat. Wir haben ein scharfes Auge auf Ressourcenmanagement und optimieren unsere Truppenstärken für maximale Effizienz bei Burg-Belagerungen.</p>
+                    <br>
+                    <h3>Regeln</h3>
+                    <ul>
+                        <li>Absolutes Befolgen der Rathaustreue und Befehle bei Staatskämpfen.</li>
+                        <li>Ressourcen-Sammeln nach fairen Zuteilungsregeln.</li>
+                        <li>Keine toxische Sprache im Welt-Chat.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Recruiting-Infos</h3>
+                    <p>Du liebst Strategie und mathematisch optimierte Schlachten? Dann bist du bei MVL genau richtig aufgehoben.</p>
+                    <ul>
+                        <li>Mindest-Ofenstufe: 24+</li>
+                        <li>Fokus auf Truppen-Aufwertung (Infanterie/Schützen/Kavallerie)</li>
+                    </ul>
+                    <div class="action-container">
+                        <button class="cta-btn" onclick="scrollToForm('MVL')">Jetzt Bewerben</button>
+                        <a href="#" target="_blank" class="cta-btn discord-btn">Discord beitreten</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="big" class="tab-content">
+            <div class="hero">
+                <h2>Allianz: BiG</h2>
+                <p>Große Taten, wahre Helden</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Kurzprofil</h3>
+                    <p>Bei BiG ist der Name Programm. Wir streben nach den größten Meilensteinen im Spiel. Mit einer gesunden Mischung aus erfahrenen Spielern (Whales) und hochmotivierten Free-to-Play-Unterstützern reißen wir jede Mauer ein.</p>
+                    <br>
+                    <h3>Regeln</h3>
+                    <ul>
+                        <li>Teilnahme am Schlossstreit (Castle Battle) nach Vorgabe der Führung.</li>
+                        <li>Konsequentes Leveln der Helden-Ausrüstung.</li>
+                        <li>Konstruktives Einbringen im Allianz-Alltag.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Recruiting-Infos</h3>
+                    <p>Wir wachsen schnell und suchen Verstärkung an der vordersten Frontlinie. Wenn du ehrgeizig bist, komm zu BiG.</p>
+                    <ul>
+                        <li>Mindest-Ofenstufe: 25+</li>
+                        <li>Hohe Beteiligung an abendlichen Rallys</li>
+                    </ul>
+                    <div class="action-container">
+                        <button class="cta-btn" onclick="scrollToForm('BiG')">Jetzt Bewerben</button>
+                        <a href="#" target="_blank" class="cta-btn discord-btn">Discord beitreten</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sta" class="tab-content">
+            <div class="hero">
+                <h2>Allianz: StA</h2>
+                <p>Die Bruderschaft der eisernen Faust</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Kurzprofil</h3>
+                    <p>StA vereint Disziplin mit unschlagbarem Teamgeist. Wir sind dafür bekannt, in brenzligen Situationen die Ruhe zu bewahren und durch eiserne Verteidigungslinien jeden Angreifer zerschellen zu lassen.</p>
+                    <br>
+                    <h3>Regeln</h3>
+                    <ul>
+                        <li>Verteidigungskoordination über Markierungen beachten.</li>
+                        <li>Immer ein Auge auf die Allianzhilfe-Zähler haben.</li>
+                        <li>Loyalität zum Staat 1745 steht an oberster Stelle.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Recruiting-Infos</h3>
+                    <p>Schildkröten-Taktik oder brutaler Gegenangriff? Wir suchen treue Verteidiger, die Struktur lieben.</p>
+                    <ul>
+                        <li>Mindest-Ofenstufe: 23+</li>
+                        <li>Zuverlässigkeit bei zeitkritischen Events</li>
+                    </ul>
+                    <div class="action-container">
+                        <button class="cta-btn" onclick="scrollToForm('StA')">Jetzt Bewerben</button>
+                        <a href="#" target="_blank" class="cta-btn discord-btn">Discord beitreten</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="contact-section" style="margin-top: 40px;">
+            <h3>Allianz-Kontakt & Bewerbung</h3>
+            <p style="color: var(--text-gray); margin-bottom: 20px;">Wähle deine Zielallianz aus und sende deine Spieldaten direkt an die Führungsebene.</p>
+            <form action="https://formspree.io/f/DEINE_FORMSPREE_ID" method="POST">
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="alliance">Ziel-Allianz</label>
+                        <select id="alliance" name="Allianz" required>
+                            <option value="">-- Bitte wählen --</option>
+                            <option value="PoW">PoW</option>
+                            <option value="YWN">YWN</option>
+                            <option value="MVL">MVL</option>
+                            <option value="BiG">BiG</option>
+                            <option value="StA">StA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ingamename">In-Game Name (IGN)</label>
+                        <input type="text" id="ingamename" name="InGame_Name" placeholder="z.B. FrostGamer99" required>
+                    </div>
+                </div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="furnace">Ofenstufe (Furnace Level)</label>
+                        <input type="number" id="furnace" name="Ofenstufe" min="1" max="30" placeholder="z.B. 25" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="power">Aktuelle Kampfkraft (Power)</label>
+                        <input type="text" id="power" name="Kampfkraft" placeholder="z.B. 45 Mio." required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nachricht / Warum möchtest du zu uns?</label>
+                    <textarea id="message" name="Nachricht" rows="4" placeholder="Stelle dich kurz vor..." required></textarea>
+                </div>
+                <button type="submit" class="cta-btn" style="width: 100%;">Bewerbung abschicken</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 State 1745 - Whiteout Survival Community. Erstellt für Einigkeit und Stärke.</p>
+    </footer>
+
+    <script>
+        function openTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToForm(allianceName) {
+            const selectEl = document.getElementById('alliance');
+            selectEl.value = allianceName;
+            
+            const contactSection = document.getElementById('contact-section');
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+            
+            contactSection.style.outline = "2px solid #38bdf8";
+            setTimeout(() => {
+                contactSection.style.outline = "none";
+            }, 1500);
+        }
+    </script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'de',
+                includedLanguages: 'de,en,es,ru,tr,ko,ja', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
